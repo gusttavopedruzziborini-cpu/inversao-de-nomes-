@@ -1,25 +1,40 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36616.10 d17.14
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inversão de Nomes", "inversão de Nomes\inversão de Nomes.csproj", "{B9D31758-00D7-46E0-94C9-1278B5CC8571}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B9D31758-00D7-46E0-94C9-1278B5CC8571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9D31758-00D7-46E0-94C9-1278B5CC8571}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9D31758-00D7-46E0-94C9-1278B5CC8571}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9D31758-00D7-46E0-94C9-1278B5CC8571}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B5D02438-DC3C-4575-87E5-867B6F57EF6F}
-	EndGlobalSection
-EndGlobal
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string nome1, nome2, nome3, nome4, auxiliar;
+
+        Console.Write("Digite o nome#1: ");
+        nome1 = Console.ReadLine();
+
+        Console.Write("Digite o nome#2: ");
+        nome2 = Console.ReadLine();
+
+        Console.Write("Digite o nome#3: ");
+        nome3 = Console.ReadLine();
+
+        Console.Write("Digite o nome#4: ");
+        nome4 = Console.ReadLine();
+
+        auxiliar = nome1;
+        nome1 = nome4;
+
+        nome4 = auxiliar;
+
+        auxiliar = nome2;
+        nome2 = nome3;
+
+        nome3 = auxiliar;
+
+        Console.WriteLine("\nNomes inseridos na sequência invertida:");
+        Console.WriteLine(nome1);
+        Console.WriteLine(nome2);
+        Console.WriteLine(nome3);
+        Console.WriteLine(nome4);
+
+        Console.ReadKey();
+    }
+}
